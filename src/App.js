@@ -11,6 +11,9 @@ function App() {
   let [operator, setOperator] = useState('+')
   let [rightNumber, setRightNumber] = useState('0')
   let [result, setResult] = useState('0')
+  let [stored, setStored] = useState('')
+  let [recall, setRecall] = useState('')
+
 
   function addDigitToLeftNumber(digit) {
     if (leftNumber === '0') {
@@ -62,6 +65,10 @@ function App() {
             <button onClick = {() => addDigitToLeftNumber('0')}>0</button>
             <button onClick = {() => setLeftNumber('0')}>Clear</button>
           </div>
+          <div className="Recall">
+          <p>{recall}</p>
+          <button onClick = {() => setLeftNumber(stored)}>Recall</button>
+        </div>
         </div>
         
         <div className="panel">
@@ -89,12 +96,24 @@ function App() {
             <button onClick = {() => addDigitToRightNumber('0')}>0</button>
             <button onClick = {() => setRightNumber('0')}>Clear</button>
           </div>
+          <div className="Recall">
+          <p>{recall}</p>
+          <button onClick = {() => setRightNumber(stored)}>Recall</button>
+        </div>
         </div>
         <div className="panel answer">
           <p>{result}</p>
           <div>
             <button onClick = {() => calculateResult()}>=</button>
           </div>
+        <div className="Store">
+          <p>{stored}</p>
+          <button onClick = {() => setStored(result)}>Store</button>
+        </div>
+        {/* <div className="Recall">
+          <p>{recall}</p>
+          <button onClick = {() => setRecall(stored)}>Recall</button>
+        </div> */}
         </div>
     </div>
   )
