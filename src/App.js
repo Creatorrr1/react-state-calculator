@@ -1,10 +1,14 @@
 import "./App.css"
+import Calculate from './calculator.js'
+import Operator from './operator.js'
+
 
 function App() { 
 
   return (
     <div className="calculator">
-        <div className="panel">
+      <Calculate/>
+        {/* <div className="panel">
           <p>0</p>
           <div className="numbers">
             <button>1</button>
@@ -19,9 +23,11 @@ function App() {
             <button>0</button>
             <button>Clear</button>
           </div>
-        </div>
+        </div> */}
+
+        <Operator/>
         
-        <div className="panel">
+        {/* <div className="panel">
           <p>+</p>
           <div className="numbers">
             <button>+</button>
@@ -29,9 +35,10 @@ function App() {
             <button>*</button>
             <button>÷</button>
           </div>
-        </div>
+        </div> */}
 
-        <div className="panel">
+        <Calculate/>
+        {/* <div className="panel">
           <p>0</p>
           <div className="numbers">
             <button>1</button>
@@ -46,7 +53,7 @@ function App() {
             <button>0</button>
             <button>Clear</button>
           </div>
-        </div>
+        </div> */}
         <div className="panel answer">
           <p>0</p>
           <div>
